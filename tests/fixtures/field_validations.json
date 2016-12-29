@@ -1,0 +1,45 @@
+{
+    "test_order_id_validation": {
+        "input": [
+                        {"order_id": "Na", "price": "240.10", "timeval": "09:45", "action": "sell", "quantity": "100", "stock": "XAM"},
+                        {"order_id": "~", "price": "237.45", "timeval": "09:45", "action": "sell", "quantity": "90", "stock": "XAM"},
+                        {"order_id": "'", "price": "238.10", "timeval": "09:47", "action": "buy", "quantity": "80", "stock": "XAM"},
+                        {"order_id": null, "price": "241.50", "timeval": "09:48", "action": "sell", "quantity": "220", "stock": "XAM"}
+                    ]
+    },
+    "test_timeval_validation": {
+        "input": [
+                        {"order_id": "1", "price": "240.10", "timeval": "09:45 AM", "action": "sell", "quantity": "100", "stock": "XAM"},
+                        {"order_id": "2", "price": "237.45", "timeval": "2016-12-21 00:12:01", "action": "sell", "quantity": "90", "stock": "XAM"},
+                        {"order_id": "3", "price": "238.10", "timeval": "Custom", "action": "buy", "quantity": "80", "stock": "XAM"},
+                        {"order_id": "4", "price": "241.50", "timeval": null, "action": "sell", "quantity": "220", "stock": "XAM"}
+                    ]
+    },
+    "test_stock_validation": {
+        "input": [
+                        {"order_id": "1", "price": "240.10", "timeval": "09:45", "action": "sell", "quantity": "100", "stock": null},
+                        {"order_id": "2", "price": "237.45", "timeval": "09:45", "action": "sell", "quantity": "90", "stock": "XAM"}
+                    ]
+    },
+    "test_action_validation": {
+        "input": [
+                        {"order_id": "1", "price": "240.10", "timeval": "09:45", "action": "selling", "quantity": "100", "stock": "XAM"},
+                        {"order_id": "3", "price": "238.10", "timeval": "09:47", "action": 1, "quantity": "80", "stock": "XAM"},
+                        {"order_id": "2", "price": "237.45", "timeval": "09:45", "action": null, "quantity": "90", "stock": "XAM"}
+                    ]
+    },
+    "test_quantity_validation": {
+        "input": [
+                        {"order_id": "1", "price": "240.10", "timeval": "09:45", "action": "sell", "quantity": "Custom", "stock": "XAM"},
+                        {"order_id": "2", "price": "237.45", "timeval": "09:45", "action": "sell", "quantity": "~", "stock": "XAM"},
+                        {"order_id": "3", "price": "238.10", "timeval": "09:47", "action": "buy", "quantity": null, "stock": "XAM"}
+                    ]
+    },
+    "test_price_validation": {
+        "input": [
+                        {"order_id": "1", "price": "1/4", "timeval": "09:45", "action": "sell", "quantity": "100", "stock": "XAM"},
+                        {"order_id": "3", "price": "Custom", "timeval": "09:47", "action": "buy", "quantity": "80", "stock": "XAM"},
+                        {"order_id": "2", "price": null, "timeval": "09:45", "action": "sell", "quantity": "90", "stock": "XAM"}
+                    ]
+    }
+}

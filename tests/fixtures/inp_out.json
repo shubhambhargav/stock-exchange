@@ -1,0 +1,27 @@
+{
+    "test_sample_input_output": {
+        "input": [
+                        {"order_id": "1", "price": "240.10", "timeval": "09:45", "action": "sell", "quantity": "100", "stock": "XAM"},
+                        {"order_id": "2", "price": "237.45", "timeval": "09:45", "action": "sell", "quantity": "90", "stock": "XAM"},
+                        {"order_id": "3", "price": "238.10", "timeval": "09:47", "action": "buy", "quantity": "80", "stock": "XAM"},
+                        {"order_id": "5", "price": "241.50", "timeval": "09:48", "action": "sell", "quantity": "220", "stock": "XAM"},
+                        {"order_id": "6", "price": "238.50", "timeval": "09:49", "action": "buy", "quantity": "50", "stock": "XAM"},
+                        {"order_id": "7", "price": "1001.10", "timeval": "09:52", "action": "buy", "quantity": "10", "stock": "TCS"},
+                        {"order_id": "8", "price": "240.10", "timeval": "10:01", "action": "sell", "quantity": "20", "stock": "XAM"},
+                        {"order_id": "9", "price": "242.70", "timeval": "10:02", "action": "buy", "quantity": "150", "stock": "XAM"}
+                    ],
+        "output": [
+                        {"sell_price": 237.45, "buy_order_id": 3, "sell_order_id": 2, "quantity": 80},
+                        {"sell_price": 237.45, "buy_order_id": 6, "sell_order_id": 2, "quantity": 10},
+                        {"sell_price": 240.1, "buy_order_id": 9, "sell_order_id": 1, "quantity": 100},
+                        {"sell_price": 240.1, "buy_order_id": 9, "sell_order_id": 8, "quantity": 20},
+                        {"sell_price": 241.5, "buy_order_id": 9, "sell_order_id": 5, "quantity": 30}
+                ]
+    },
+    "test_wrong_length_input_error": {
+        "input": [
+                    "Sample wrong length input",
+                    "Hello there!"
+                ]
+    }
+}
