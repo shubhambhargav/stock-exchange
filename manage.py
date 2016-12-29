@@ -1,5 +1,7 @@
+import os
 import sys
-sys.path.append('/Users/shubh/Documents/coding/practise/assignment/xamcheck')
+dirloc = os.path.abspath(os.path.dirname(__file__))
+sys.path.append(dirloc)
 
 from argparse import ArgumentParser
 
